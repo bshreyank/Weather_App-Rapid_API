@@ -1,7 +1,17 @@
+import { env } from 'process';
+
+dotenv.config();
+
+const config = new Configuration({
+    apiKey: process.env.api-key
+});
+
+//const openai = new api-key(config);
+
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'de157f94e0msh0eba535bf6f891dp18f932jsndb3d345457e3',
+    'X-RapidAPI-Key': config(),
     'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com',
   },
 
